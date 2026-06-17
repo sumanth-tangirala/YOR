@@ -159,6 +159,6 @@ class YORMujoco:
 if __name__ == "__main__":
     _HERE = Path(__file__).parent
     yor_mujoco = YORMujoco(mjcf_path=(_HERE / "yor-description" / "scene.mjcf").as_posix())
-    rpc_server = RPCServer(yor_mujoco, "localhost", 8081, threaded=False)
+    rpc_server = RPCServer(yor_mujoco, 8081, threaded=False)
     atexit.register(rpc_server.stop)
     rpc_server.start()

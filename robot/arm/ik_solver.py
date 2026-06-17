@@ -63,7 +63,7 @@ class SingleArmIK:
 
     def init(self, q):
         current_q = self.configuration.q.copy()
-        current_q[self.dof_ids] = q
+        current_q[self.dof_ids] = q[self.dof_ids]
         self.configuration.update(current_q)
         self.posture_task.set_target_from_configuration(self.configuration)
         self.initalized_ = True

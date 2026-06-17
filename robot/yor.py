@@ -54,7 +54,7 @@ class YOR():
         self,
         base_max_vel=np.array((1.0, 1.0, 1.57)),
         base_max_accel=np.array((1.0, 1.0, 1.57)),
-        no_arms: bool = False,  # default to True since Base is independent now
+        no_arms: bool = True,  # default to True since Base is independent now
     ):
         self._initialized = False
         self._zed_initialized = False
