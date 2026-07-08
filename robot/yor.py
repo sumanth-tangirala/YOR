@@ -459,7 +459,7 @@ class YOR():
 
 
 def main():    
-    yor = YOR(no_arms=False)
+    yor = YOR(no_arms=True)
     yor.init()
     server = RPCServer(yor, port=YOR_PORT, threaded = True)
     atexit.register(server.stop)
